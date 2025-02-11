@@ -4,7 +4,7 @@ class Node {
         this.next = null;
     }
 } 
-class Stack {
+class Stack { 
     constructor() {
         this.head = null;
         this.size = 0;
