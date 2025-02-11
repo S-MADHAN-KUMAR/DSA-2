@@ -15,7 +15,7 @@ function bubbleSort(arr){
 
 let arr =[2,1,-5,4,11]
 bubbleSort(arr)
-console.log(arr);
+console.log(arr)
 
 
 // Big O = o(n^2)
