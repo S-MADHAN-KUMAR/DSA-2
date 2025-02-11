@@ -52,13 +52,13 @@ class Stack {
             console.log(`Stack is empty`);
         }
         else {
-            let curr = this.head;
-            let stackValues = '';
+            let curr = this.head
+            let stackValues = ''
             while (curr) {
-                stackValues += `${curr.value} `;
-                curr = curr.next;
+                stackValues += `${curr.value} `
+                curr = curr.next
             }
-            console.log(stackValues);
+            console.log(stackValues)
         }
     }
 
