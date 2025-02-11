@@ -3,7 +3,7 @@ class Node {
         this.value = value;
         this.next = null;
     }
-}
+} 
 class Stack {
     constructor() {
         this.head = null;
