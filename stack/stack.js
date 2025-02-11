@@ -9,7 +9,7 @@ class Stack {
         this.head = null;
         this.size = 0;
     }
-
+ 
     isEmpty() {
         return this.size === 0;
     }
