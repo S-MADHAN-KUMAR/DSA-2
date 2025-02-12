@@ -23,11 +23,13 @@ class HashTable {
     get(key) {
         const index = this.hash(key);
         if (this.table[index]) {
+            let result = []
             for (let pair of this.table[index]) {
                 if (pair[0] === key) {
-                    return pair[1]
+                    result.push(pair[1])
                 }
             }
+            return result.join(' , ')
         }
         return undefined;
     }
@@ -72,12 +74,16 @@ const ht = new HashTable(10);
 ht.set("name", "John")
 ht.set("name", "John")
 ht.set("name", "Doe")
+ht.set("mane", "Doeee")
 ht.set("age", 25)
 ht.set("city", "NYC")
 ht.set("city", "NYC")
 
 console.log("Before removing duplicates:")
 ht.display();
+console.log('=================================================')
+console.log(ht.get("mane"))
+console.log('=================================================')
 
 ht.removeDuplicates();
 
