@@ -57,6 +57,8 @@ class Stack {
 
 }
 
+//===========================================================================================================//
+
 function reverseString(value) {
     const NEWSTR_STACK = new Stack();
     for (let char of value) {
@@ -67,8 +69,32 @@ function reverseString(value) {
         reversedString += NEWSTR_STACK.pop()
     }
     return reversedString
+}
 
+//===========================================================================================================//
+
+function reverseStringWords(str) {
+    let words = str.split(' ');  
+        let stack = new Stack();
+    let reversedWords = words.map(word => {
+
+
+        for (let char of word) {
+            stack.push(char);
+        }
+
+
+        let reversedWord = '';
+        while (!stack.isEmpty()) {
+            reversedWord += stack.pop();
+        }
+
+        return reversedWord;
+    });
+
+    return reversedWords.join(' ')
 }
 
 console.log(reverseString('Bimillah'));
+console.log(reverseStringWords('hello world'));
 

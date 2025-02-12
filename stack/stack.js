@@ -37,7 +37,7 @@ class Stack {
         }
     }
 
-    peek() {
+    peak() {
         if (this.isEmpty()) {
             return `Stack is empty`
         }
