@@ -56,29 +56,29 @@ class Stack {
     }
 
     sort() {
-        const temp_stack = new Stack();
+        const temp_stack = new Stack()
         while (!this.isEmpty()) {
-            const currentvalue = this.pop();
+            const currentvalue = this.pop()
 
             while (!temp_stack.isEmpty() && temp_stack.peek() > currentvalue) {
-                this.push(temp_stack.pop());
+                this.push(temp_stack.pop())
             }
-            temp_stack.push(currentvalue);
+            temp_stack.push(currentvalue)
         }
 
        
         while (!temp_stack.isEmpty()) {
-            this.push(temp_stack.pop());
+            this.push(temp_stack.pop())
         }
     }
 }
 
 // Example Usage:
-const stack = new Stack();
-stack.push(1);
-stack.push(4);
-stack.push(3);
-stack.push(6);
-stack.print();  // Output: 6 | 3 | 4 | 1
-stack.sort();
-stack.print();  // Output: 1 | 3 | 4 | 6 (Sorted in ascending order)
+const stack = new Stack()
+stack.push(1)
+stack.push(4)
+stack.push(3)
+stack.push(6)
+stack.print()  // Output: 6 | 3 | 4 | 1
+stack.sort()
+stack.print()  // Output: 1 | 3 | 4 | 6 (Sorted in ascending order)

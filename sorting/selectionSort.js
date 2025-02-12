@@ -58,6 +58,7 @@ console.log(selectionSort(arr));
 //     }
 //     return arr
 // }
+
 // const people = [
 //     { name: "Alex" },
 //     { name: "Zoe" },
