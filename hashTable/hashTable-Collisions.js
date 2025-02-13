@@ -18,39 +18,40 @@ class HashTable {
             this.table[index] = []
         }
         
-        const bucket = this.table[index];
-        const sameKeyItem = bucket.find(item => item[0] === key);
+        const bucket = this.table[index]
+        const sameKeyItem = bucket.find(item => item[0] === key)
         
         if (sameKeyItem) {
-            sameKeyItem[1] = value; // Update existing key
+            sameKeyItem[1] = value
         } else {
-            bucket.push([key, value]); // Insert new key-value pair
+            bucket.push([key, value])
         }
     }
 
     get(key) {
-        const index = this.hash(key);
-        const bucket = this.table[index];
+        const index = this.hash(key)
+        const bucket = this.table[index]
 
         if (bucket) {
             const sameKeyItem = bucket.find(item => item[0] === key);
             if (sameKeyItem) {
-                return sameKeyItem[1]; // Return value if key exists
+                return sameKeyItem[1]
             }
         }
-        return undefined; // Return undefined if key is not found
+        return undefined
     }
 
     remove(key) {
-        const index = this.hash(key);
-        const bucket = this.table[index];
+        const index = this.hash(key)
+        const bucket = this.table[index]
 
         if (bucket) {
             const itemIndex = bucket.findIndex(item => item[0] === key);
             if (itemIndex !== -1) {
-                bucket.splice(itemIndex, 1); // Remove key-value pair
+                
+                bucket.splice(itemIndex, 1)
                 if (bucket.length === 0) {
-                    this.table[index] = undefined; // Remove empty array for cleanup
+                    this.table[index] = undefined
                 }
             }
         }
@@ -70,12 +71,13 @@ const table = new HashTable(50);
 
 console.log('===========================================');
 table.set("name", "bismillah");
+table.set("name", "BISMILLAH");
 table.set("age", 14);
 table.set("mane", "Allhamduillah..");
 table.display();
 
 console.log('===========================================');
-table.remove("name");
+table.remove("age");
 
 table.display();
 console.log('===========================================');

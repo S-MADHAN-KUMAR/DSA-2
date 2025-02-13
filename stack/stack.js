@@ -32,7 +32,7 @@ class Stack {
         else {
             const POPPED_VALUE = this.head.value;
             this.head = this.head.next;
-            this.size--;
+            this.size--
             return POPPED_VALUE
         }
     }
